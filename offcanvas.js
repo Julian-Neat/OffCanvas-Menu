@@ -1,3 +1,6 @@
+var toggleMenuClass = 'show-menu';
+var siteWrapperID   = 'inner-wrapper';
+var menuToggleID    = 'menu-toggle';
 function menuToggle( element, className ) {
   var currentClasses = element.className.split(" ");
   var hasClass = false;
