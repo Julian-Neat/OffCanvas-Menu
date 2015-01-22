@@ -1,6 +1,19 @@
 var toggleMenuClass = 'show-menu';
 var siteWrapperID   = 'inner-wrapper';
 var menuToggleID    = 'menu-toggle';
+
+document.addEventListener('DOMContentLoaded', function(){
+  document.getElementById( menuToggleID ).addEventListener('click', function() {
+    var wrapper  = document.getElementById( siteWrapperID );
+    menuToggle( wrapper, toggleMenuClass );
+  });
+
+  document.getElementById( 'offcanvas-site-overlay' ).addEventListener( 'click', function() {
+    var wrapper = document.getElementById( siteWrapperID );
+    menuToggle( wrapper, toggleMenuClass );
+  });
+});
+
 function menuToggle( element, className ) {
   var currentClasses = element.className.split(" ");
   var hasClass = false;
